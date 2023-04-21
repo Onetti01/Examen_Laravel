@@ -32,7 +32,7 @@ class HomeController extends Controller
 
     public function darseBaja($email)
     {
-        User::where('emailAux',$email)->delete();
+        User::where('email',$email)->delete();
         return redirect(route("principal"));
     }
 
